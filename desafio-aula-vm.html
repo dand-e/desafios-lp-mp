@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset=UTF-8>
+  <meta name="description" content="Desafio de Operações aritméticas no JavaScript">
+  <meta name="keywords" content="JavaScript, operações, aritméticas, velocidade, média">
+  <title>Algoritmo de Velocidade média em JavaScript</title>
+  <style>
+    body{
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
+      text-align: center;
+      background: linear-gradient(45deg, lightBlue, white, lightPink) no-repeat;
+      height: 100vh;
+    }
+    .container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 90%;
+      margin: auto;
+      height: 90vh;
+    }
+
+    input, button{
+      width: 33%;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Calcule a velocidade !!</h1>
+      <!-- <form action="" method="get"> -->
+      <label for="distancia">Digite a distância percorrida ou a ser percorrida</label>
+      <input type="number" name="distancia" id="distancia" placeholder="Digite a distância em metros" required>
+      <label for="tempo">Digite o tempo decorrido ou a ser feito</label>
+      <input type="number" name="tempo" id="tempo" placeholder="Digite o tempo em segundos" required>
+      <button type="submit" onclick="velocidade()">Calcular!</button>
+    <!-- </form> -->
+  </div>
+</body>
+<script src="./desafio-aula-vm.js"></script>
+</html>
