@@ -5,5 +5,5 @@ function velocidade (){
   console.log(tempo);
   let velocidadeMedia = distancia/tempo; 
   console.log(velocidadeMedia);
-  return alert(`A velocidade média é ${velocidadeMedia}`)
+  return alert(`A velocidade média é ${velocidadeMedia}m/s`)
 }
