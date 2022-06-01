@@ -27,18 +27,37 @@
       width: 33%;
       margin: 10px;
     }
+
+    button{
+      background: linear-gradient(90deg, black, rgb(71, 23, 3), red, orange, yellow, green,blue, indigo);
+    }
+
+    @media only screen and (max-width: 400px){
+      body{
+        font-size: 30px;
+        width: 100%;
+      }
+    
+      .container{
+        width:100%;
+      }
+      input, button{
+        width: 90%;
+      }
+    }
+    
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Calcule a velocidade !!</h1>
-      <!-- <form action="" method="get"> -->
-      <label for="distancia">Digite a distância percorrida ou a ser percorrida</label>
-      <input type="number" name="distancia" id="distancia" placeholder="Digite a distância em metros" required>
-      <label for="tempo">Digite o tempo decorrido ou a ser feito</label>
-      <input type="number" name="tempo" id="tempo" placeholder="Digite o tempo em segundos" required>
+      <form action="" method="get">
+      <label for="distancia">Digite a distância percorrida ou a ser percorrida</label><br/>
+      <input type="number" name="distancia" id="distancia" placeholder="Digite a distância em metros" required><br/>
+      <label for="tempo">Digite o tempo decorrido ou a ser feito</label><br/>
+      <input type="number" name="tempo" id="tempo" placeholder="Digite o tempo em segundos" required><br/>
       <button type="submit" onclick="velocidade()">Calcular!</button>
-    <!-- </form> -->
+      </form>
   </div>
 </body>
 <script src="./desafio-aula-vm.js"></script>
