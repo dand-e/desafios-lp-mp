@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset=UTF-8>
+  <meta name="description" content="Desafio de é par ou é ímpar">
+  <meta name="keywords" content="JavaScript, par, ímpar">
+  <title>Par ou ímpar em JavaScript</title>
+  <style>
+    body{
+      height: 97vh;
+      background: linear-gradient(magenta, yellow, cyan) no-repeat;
+      text-align: center;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    main{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+    p{
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Par ou ímpar?</h1>
+    <h2>em <em>JavaScript</em></h2>
+    <p class="num"></p>
+  </main>
+</body>
+<script type="text/javascript">
+  /*Impar ou par
+  Crie um programa que determine se um número é impar ou par
+  Dica do sucesso: todo número par é divisível por 2 */
+
+  window.onload = function(){
+    var num = parseInt(prompt('Digite um número', 2));
+    const par = `O número ${num} é par!`;
+    const impar = `O número ${num} é ímpar!`;
+
+    if ( num % 2 === 0){
+      console.log(par);
+      return document.getElementsByClassName('num')[0].innerHTML=par;
+    } else if (num % 2 !== 0 && num % 2 > 0){
+      console.log(impar)
+      return document.getElementsByClassName('num')[0].innerHTML=impar;
+    } else{
+      return document.getElementsByClassName('num')[0].innerHTML=`${num} não é um número`;
+    }
+  }
+  
+</script>
