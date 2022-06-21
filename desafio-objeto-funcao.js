@@ -16,6 +16,7 @@ const familia = [
   } 
 ]
 
+//For of
 const familiaCompleta = () => {
   for(let membro of familia){
     console.log(`${membro.nome} é de ${membro.signo}, tem ${membro.idade} anos e gosta da cor ${membro.corPreferida}.`);
@@ -23,3 +24,21 @@ const familiaCompleta = () => {
 };
 
 familiaCompleta();
+
+//For of e for in
+const familiaCompleta2 = () => {
+  for(const membro of familia){
+    for(let info in membro){
+      console.log(`${familia.indexOf(membro)+1} - ${info}: ${membro[info]}`);
+    };
+  };
+};
+
+familiaCompleta2();
+
+//For of entries()
+for (membro of familia.entries()){
+  console.log(membro)
+}
+
+
