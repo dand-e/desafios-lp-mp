@@ -254,7 +254,36 @@ console.log(bonde.find((pessoa) => pessoa.saldoNaConta > 5000));
 //bonde.forEach((pessoa, index) => console.log(`${pessoa.apelido} tem ${pessoa.idade} anos`))
 
 /* Um array com todas as pessoas que tem Friends entre as séries */
-//const bondeFriends = bonde.map((pessoas) => pessoas.seriesPreferiadas.find(el => el === "Friends"))
+/* Primeira maneira de fazer */
+const pessoasAssistemFriends1 = bonde.filter((pessoa) => {
+  if (pessoa.seriesPreferiadas)
+    return pessoa.seriesPreferiadas.find((el) => el === "Friends");
+});
+pessoasAssistemFriends1.forEach((pessoa) => console.log(pessoa.apelido));
+
+/* Segunda maneira de fazer */
+const pessoasAssistemFriends2 = bonde.filter(
+  (pessoa) =>
+    pessoa.seriesPreferiadas && pessoa.seriesPreferiadas.includes("Friends")
+);
+pessoasAssistemFriends2.forEach((pessoa) => console.log(pessoa.apelido));
+
+/* Terceira maneira de fazer - Maneira raiz! Pelo for */
+const pessoasAssistemFriends3 = [];
+for (let i = 0; i < bonde.length; i++) {
+  let pessoa = bonde[i];
+
+  if (pessoa.seriesPreferiadas) {
+    for (let j = 0; j < pessoa.seriesPreferiadas.length; j++) {
+      let serie = pessoa.seriesPreferiadas[j];
+
+      if (serie === "Friends") {
+        pessoasAssistemFriends3.push(bonde[i].apelido);
+      }
+    }
+  }
+}
+pessoasAssistemFriends3.forEach((apelidoPessoa) => console.log(apelidoPessoa));
 
 /*const numeros = [1,2,3];
 const numerosDuplicados = numeros.map((e) => e*2);
